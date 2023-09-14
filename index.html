@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+  </head>
+  <body>
+    <main>
+        <h1>Welcome to My Website</h1>  
+        <p>This is my new website which is hosted on GitHub Pages!</p>
+        <button type="button" onclick="handleSubmit()">Submit</button>
+        <button type="button" onclick="handleClose()">Close</button>
+    </main>
+    <script>
+      function handleSubmit() {
+          let msg = {
+              action: 'Submit',
+              oppId: '0067a00000RpUe2AAF'
+          };
+          window.parent.postMessage(msg, 'https://bain4--appint.sandbox.lightning.force.com');
+      }
+      function handleClose() {
+          let msg = {
+              action: 'Close'
+          };
+          window.parent.postMessage(msg, 'https://bain4--appint.sandbox.lightning.force.com');
+      }
+      window.addEventListener('message', function(e) {
+          console.log("Message received from the parent: " + e.origin + e.data); // Message received from parent
+      });
+    </script>
+  </body>
+</html>
