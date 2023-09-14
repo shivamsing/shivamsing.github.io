@@ -15,11 +15,13 @@
     </main>
     <script>
       function handleSubmit() {
+        alert('Enter Method');
           let msg = {
               action: 'Submit',
               oppId: '006Ho00000RTxFiIAL'
           };
           window.parent.postMessage(msg, '*');
+        alert('Exit Method');
       }
       function handleClose() {
           let msg = {
