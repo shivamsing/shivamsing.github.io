@@ -17,15 +17,15 @@
       function handleSubmit() {
           let msg = {
               action: 'Submit',
-              oppId: '0067a00000RpUe2AAF'
+              oppId: '006Ho00000RTxFiIAL'
           };
-          window.parent.postMessage(msg, 'https://bain4--appint.sandbox.lightning.force.com');
+          window.parent.postMessage(msg, 'https://baincompoc-dev-ed.develop.lightning.force.com');
       }
       function handleClose() {
           let msg = {
               action: 'Close'
           };
-          window.parent.postMessage(msg, 'https://bain4--appint.sandbox.lightning.force.com');
+          window.parent.postMessage(msg, 'https://baincompoc-dev-ed.develop.lightning.force.com');
       }
       window.addEventListener('message', function(e) {
           console.log("Message received from the parent: " + e.origin + e.data); // Message received from parent
