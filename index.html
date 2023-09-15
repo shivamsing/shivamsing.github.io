@@ -10,18 +10,16 @@
     <main>
         <h1>Welcome to My Website</h1>  
         <p>This is my new website which is hosted on Shivam GitHub!</p>
-        <button type="button" onclick="alert('Hi');handleSubmit();alert('Bye');">Submit</button>
+        <button type="button" onclick="handleSubmit()">Submit</button>
         <button type="button" onclick="handleClose()">Close</button>
     </main>
     <script>
       function handleSubmit() {
-        alert('Enter Method');
           let msg = {
               action: 'Submit',
               oppId: '006Ho00000RTxFiIAL'
           };
           window.parent.postMessage(msg, '*');
-        alert('Exit Method');
       }
       function handleClose() {
           let msg = {
